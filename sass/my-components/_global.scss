@@ -1,0 +1,381 @@
+/* defaults */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+
+
+
+/* header */
+
+.header {
+    padding-top: 20px;
+}
+
+
+
+
+
+.slick-slide {
+    &:focus {
+        outline: none;
+    }
+}
+
+.slider-for {
+    .slick-slide {
+        padding: 0 3px;
+    }
+}
+
+.slider-nav {
+    border-bottom: 1px solid #eaeaea;
+    .slick-track {
+        display: table;
+        width: 150%;
+        @include desktop {
+            max-width: 80%;
+            margin-left: 20%;
+            margin-right: 0;
+        }
+    }
+    .slick-slide {
+        position: relative;
+        display: table-cell;
+        width: 33.333%;
+        font-size: 17px;
+        text-transform: uppercase;
+        color: #b9b9b9;
+        padding: 3px 10px;
+        text-align: center;
+        vertical-align: middle;
+        float: none;
+        @include desktop {
+            width: auto!important;
+            padding: 5px 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &.slick-current {
+            color: #213298;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background-color: #213298;
+            }
+        }
+    }
+}
+
+
+
+
+/*  first page  */
+
+.highlights {
+    &-img {
+        padding-bottom: 45%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        margin-bottom: 20px;
+    }
+
+    &-top {
+        @include clearfix;
+        .heading-h2 {
+            @include clearfix;
+            span {
+                width: 73%;
+                float: left;
+                @include desktop {
+                    float: none;
+                    width: 100%;
+                    display: block;
+                }
+
+                &+span {
+                    width: 27%;
+                    @include desktop {
+                        width: 100%;
+                        display: block;
+                        text-transform: none;
+                    }
+                }
+            }
+            @include desktop {
+                padding: 60px 20%;
+                text-align: center;
+                font-size: 25px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &-date {
+        padding-top: 5px;
+        width: 27%;
+        font-size: 15px;
+        float: left;
+        color: #7c7c7c;
+        @include desktop {
+            width: auto;
+            float: none;
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &-info {
+        @include desktop {
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+    }
+
+    &-item {
+        padding-bottom: 40px;
+        border-bottom: 1px solid #d8d8d8;
+        margin-bottom: 45px;
+        @include desktop {
+            padding: 0;
+            border: 1px solid #d8d8d8;
+        }
+        &-left,
+        &-right {
+            @include desktop {
+                float: left;
+            }
+        }
+        &-left {
+            @include desktop {
+                width: 35%;
+            }
+        }
+
+        &-right {
+            @include desktop {
+                width: 65%;
+                padding-left: 25px;
+                overflow-x: hidden;
+                white-space: nowrap;
+            }
+
+            .highlights-item {
+                @include desktop {
+                    width: 65%;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-right: 25px;
+                    white-space: normal;
+                }
+            }
+        }
+    }
+
+    &-title {
+        color: #000;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #999;
+        margin: 0 0 20px;
+        @include desktop {
+            border-bottom: none;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+    }
+    &-heading {
+        font-size: 18px;
+        color: #213298;
+        margin: 0 0 15px;
+        @include clearfix;
+        @include desktop {
+            margin: 0;
+            padding: 20px 20px 10px;
+        }
+    }
+    &-text {
+        float: left;
+        @include desktop {
+            float: none;
+            display: block;
+        }
+    }
+    &-icon {
+        float: right;
+        @include desktop {
+            float: none;
+            display: block;
+            text-align: right;
+        }
+        svg {
+            color: #999999;
+            width: 15px;
+            height: 25px;
+        }
+    }
+}
+
+
+
+
+
+
+/* second page */
+
+.story {
+    &-content {
+        @include clearfix;
+    }
+
+    &-item {
+        padding-right: 15px;
+        @include tablet {
+            width: 50%;
+            float: left;
+        }
+    }
+}
+
+
+
+
+
+
+/* third page*/
+
+.solutions {
+    min-height: .01%;
+    overflow-x: auto;
+
+    &-table {
+        width: 100%;
+        max-width: 100%;
+        border-spacing: 0;
+        border-bottom: 1px solid #000;
+        th,
+        td {
+            font-size: 9px;
+            padding: 5px 10px 5px 0;
+            text-align: left;
+        }
+        thead {
+            th {
+                border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
+            }
+        }
+        .section-tr {
+            td[colspan] {
+                border-bottom: 1px solid #000;
+            }
+        }
+    }
+}
+
+
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+
+@media screen and (max-width: 700px) {
+    .solutions-table {
+        thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        tr {
+            display: block;
+        }
+        td {
+            border-bottom: 1px solid #eaeaea;
+            display: block;
+        }
+        td[data-label] {
+            text-align: right;
+        }
+        td[data-label]:before {
+            /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        td:last-child {
+            border-bottom: 0;
+        }
+        .section-tr {
+            td {
+                text-align: left;
+                border-bottom: 1px solid #eaeaea;
+            }
+        }
+        .accordion-content {
+            padding: 0;
+            height: 0;
+            overflow-x: hidden;
+        }
+    }
+}
+
+

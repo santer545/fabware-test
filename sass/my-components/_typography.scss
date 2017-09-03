@@ -1,0 +1,46 @@
+.heading-h1,
+h1 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #213298;
+    margin-bottom: 20px;
+}
+
+.heading-h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #213298;
+    margin-bottom: 20px;
+}
+
+.story-heading,
+.heading-h3,
+h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 15px;
+    color: #002a87;
+}
+
+.story-heading {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
+}
+
+.solutions-heading {
+    padding: 50px 80px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* svg icons */
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
